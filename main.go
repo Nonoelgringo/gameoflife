@@ -24,14 +24,14 @@ func main() {
 	var millisecondsNb int = 150
 	var filename string
 	args := len(os.Args)
+	fmt.Println(len(os.Args))
 	switch {
 	case args <= 1 || args > 3:
 		fmt.Printf("1 or 2 arguments expected.Exiting.")
 		os.Exit(1)
 	case args == 2:
 		filename = os.Args[1]
-		fallthrough
-	case args <= 3:
+	case args == 3:
 		filename = os.Args[1]
 		millisecondsNb, _ = strconv.Atoi(os.Args[2])
 	}
